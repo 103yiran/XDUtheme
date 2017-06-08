@@ -1,0 +1,35 @@
+
+\mode<presentation>
+%%    font
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathrsfs}
+\RequirePackage{calrsfs}
+\@ifpackageloaded{fontspec}{
+    \PassOptionsToPackage{no-math}{fontspec}
+}{
+    \RequirePackage[no-math]{fontspec}
+}
+
+%% 字体
+\setCJKmainfont[BoldFont={SimHei}, ItalicFont={KaiTi}]{SimSun} 
+\setCJKsansfont{Microsoft YaHei}
+\setCJKmonofont{FangSong}       % macos word
+
+
+% Require XeLaTeX
+\RequirePackage{xltxtra,xunicode}
+\setmainfont[Mapping=tex-text]{Times New Roman}
+\setsansfont[Mapping=tex-text]{Helvetica}
+%\setmonofont{Monaco}
+
+\usefonttheme{professionalfonts}
+\usefonttheme[onlymath]{serif}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{subtitle}{size=\Large, series=\mdseries}
+\setbeamerfont{author}{size=\small, series=\bfseries}
+\setbeamerfont{date}{size=\small}
+
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+
+\mode<all>

@@ -1,0 +1,63 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamercolorthemeXDUstyle}[2015/12/27 v0.0.1 The XDUstyle Beamer Theme]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theme options and definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%theme options
+\DeclareOptionBeamer{xdred}{\def\beamer@xducolor{xdred}}%缺省默认
+\DeclareOptionBeamer{xdblue}{\def\beamer@xducolor{xdblue}}
+\DeclareOptionBeamer{sidebar}{\def\beamer@xdusidebar{true}}%缺省无
+\ProcessOptionsBeamer
+
+\def\beamer@xducolorblue{xdblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%beamer specific options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>%refers to the first four modes (beamer,handout,second and trans). That is, to all modes except the article mode
+{
+
+\definecolor{beamer@xdblue}{RGB}{0,65,130}% xdblue
+% 冷色系辅助色
+\definecolor{beamer@DarkGrayishBlue}{RGB}{136,150,163}% 
+\definecolor{beamer@ModerateBlue}{RGB}{79,121,180}% 
+\definecolor{beamer@MostlyDesaturatedDarkBlue}{RGB}{89,93,146}% 
+\definecolor{beamer@VeryDarkBlue}{RGB}{38,81,107}%
+
+\definecolor{beamer@xdred}{RGB}{175,33,37}% xdred
+% 暖色系辅助色
+\definecolor{beamer@SoftOrange}{RGB}{239,155,73}% 
+\definecolor{beamer@ModerateRed}{RGB}{180,76,76}% 
+\definecolor{beamer@DarkModerateOrange}{RGB}{167,130,75}% 
+\definecolor{beamer@VeryDarkDesaturatedOrange}{RGB}{78,53,44}% 
+\ifx\beamer@xducolor\beamer@xducolorblue%
+    \definecolor{beamer@barcolor}{RGB}{38,81,107}% 冷色系辅助色
+    \definecolor{beamer@headercolor}{RGB}{0,65,130}% xdblue
+    \definecolor{beamer@normaltextcolor}{RGB}{0,0,0}% black
+  \else%
+    \definecolor{beamer@barcolor}{RGB}{180,76,76}% 暖色系辅助色
+    \definecolor{beamer@headercolor}{RGB}{175,33,37}% xdred
+    \definecolor{beamer@normaltextcolor}{RGB}{0,0,0}% black
+  \fi%
+  
+  \setbeamercolor*{structure}{fg=beamer@headercolor}
+  \setbeamercolor*{normal text}{fg=beamer@normaltextcolor,bg=white}
+  \setbeamercolor*{frametitle}{fg=white,bg=beamer@headercolor}
+  %\setbeamercolor*{upper separation line head}{use=structure,fg=structure.fg!50}
+  %\setbeamercolor*{lower separation line head}{use=structure,fg=red,bg=beamer@xdred}
+  %\setbeamercolor*{middle separation line head}{use=structure,fg=green,bg=yellow}
+  \setbeamercolor*{section in head/foot}{use=structure,fg=white,bg=beamer@xdred!60!black}
+  \setbeamercolor*{subsection in head/foot}{use=structure,fg=white,bg=beamer@xdred!80!black}
+  \setbeamercolor*{author in head/foot}{use=structure,fg=white,bg=structure.fg}
+  \setbeamercolor*{institute in head/foot}{use=structure,fg=white,bg=structure.fg}
+  \setbeamercolor*{title in head/foot}{use=structure,fg=beamer@xdred,bg=gray!20!white}
+  \setbeamercolor*{frame number}{use=structure,fg=beamer@xdred,bg=gray!20!white}
+  %\setbeamercolor{frametitle}{use=structure,fg=black,bg=red}
+  \setbeamercolor*{framesubtitle}{use=structure,fg=red,bg=gray!10!white}
+  \setbeamercolor*{caption name}{fg=black}
+  %\setbeamercolor*{block title}{fg=white,bg=red!75!black}
+  %\setbeamercolor*{block body}{fg=black,bg=gray!20!white}
+}%end of beamer specific options
+
+\mode<all>

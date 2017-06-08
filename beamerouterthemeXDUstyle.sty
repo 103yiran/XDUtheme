@@ -1,0 +1,174 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerouterthemeXDUstyle}[2015/12/27 v0.0.1 The XDUstyle Beamer Theme]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load required packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{tikz}
+\usetikzlibrary{external}
+\RequirePackage{calc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout scheme for outer elements: split header and footer
+%\useoutertheme{split}
+%\useinnertheme{rectangles}
+%\usecolortheme{whale}
+%\usecolortheme{orchid}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theme options and definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%theme options
+\newlength{\beamer@width}
+\setlength{\beamer@width}{2cm}
+\DeclareOptionBeamer{width}{\beamer@width=#1}
+\DeclareOptionBeamer{sidebar}{\def\beamer@sidebar{true}}
+\DeclareOptionBeamer{hideothersubsections}[]{\beamer@nav@subsectionstyle{show/show/hide}}
+\DeclareOptionBeamer{hideallsubsections}[]{\beamer@nav@subsectionstyle{hide}}
+\DeclareOptionBeamer{hidetitle}{\def\beamer@hidetitle{true}}
+\DeclareOptionBeamer{hideauthor}{\def\beamer@hideauthor{true}}
+\DeclareOptionBeamer{hideinstitute}{\def\beamer@hideinst{true}}
+\DeclareOptionBeamer{shownavsym}{\def\beamer@shownavsym{true}}
+\DeclareOptionBeamer{xdred}{\def\beamer@xducolor{xdred}}
+\DeclareOptionBeamer{xdblue}{\def\beamer@xducolor{xdblue}}
+\DeclareOptionBeamer{sidebar}{\def\beamer@sidebar{true}}
+
+\newif\ifbeamer@theme@subsection
+\beamer@theme@subsectiontrue
+\DeclareOptionBeamer{subsection}[true]{\csname beamer@theme@subsection#1\endcsname}
+
+\ProcessOptionsBeamer
+
+\def\beamer@xducolorblue{xdblue}
+%the height of the header is 1.8 times the lineheight of the frame title
+\newlength{\beamer@height}
+\usebeamerfont{frametitle} %use the frame title font
+\setlength{\beamer@height}{1.8\baselineskip} 
+\reset@font %reset fonts
+%width of vertical bar separating the main text from the sidebar
+\newlength{\beamer@barwidth}
+\setlength{\beamer@barwidth}{2\beamer@height/15} %the bar width depends on the header height (by a factor of 7.5)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%beamer specific options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>%refers to the first four modes (beamer,handout,second and trans). That is, to all modes except the article mode
+{
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %templates
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate*{headline}{XDUstyle theme}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}%
+%  \ifbeamer@theme@subsection%
+    %colsep → 文本与盒子边界的间距
+    \begin{beamercolorbox}[colsep=1.5pt]{middle separation line head}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  %\fi%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+
+%frame title
+  \defbeamertemplate*{frametitle}{XDUstyle theme}{%
+  \vspace*{-0.9pt}
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=1.8em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut
+        \vskip-0.8ex%
+    \end{beamercolorbox}  
+   }
+
+\ifx\beamer@shownavsym\undefined% insert navigation symbols
+  \setbeamertemplate{navigation symbols}{%
+    %disable navigation symbols
+  }
+\fi
+
+%\useoutertheme[footline=authorinstitutetitle]{miniframes}
+\makeatletter % [add curpage/total page at the bottom](http://tex.stackexchange.com/questions/100838/beamer-dresden-theme-miniframes-appeareance-and-frame-number-insertion)
+\newcommand{\frameofframes}{/}
+\newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
+\setbeamertemplate{footline} 
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertshorttitle}%
+      \hfill%
+      {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+
+
+}%end of beamer specific options
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Macros used in the theme 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% the fancy header background
+\newcommand{\XDUheaderbackground}[0]{%
+  \tikzexternaldisable
+  \begin{tikzpicture}[overlay]
+    
+  
+    \coordinate (UC) at (\paperwidth,0); %upper right corner of the slide
+    \coordinate (LC) at (3ex+3.4cm,-\paperheight); %lower left corner of the slide
+    \coordinate (BS) at (\paperwidth,-\beamer@height+1ex); %start coordinate of the bar
+    \coordinate (BE) at (\beamer@width+\beamer@barwidth/2,-\paperheight); %end coordinate of the bar
+	\coordinate (BF) at (3ex+3.4cm,-\beamer@height);
+
+    \coordinate (IS) at (BS -| BE); %intersection
+	
+	\coordinate (XDL1) at (0,0);
+	\coordinate (XDR1) at (4ex,-\beamer@height/9);
+	\coordinate (XDL2) at (0,-2\beamer@height/9);
+	\coordinate (XDR2) at (4ex,-3\beamer@height/9);
+	\coordinate (XDL3) at (0,-4\beamer@height/9);
+	\coordinate (XDR3) at (4ex,-5\beamer@height/9);
+	\coordinate (XDL4) at (0,-6\beamer@height/9);
+	\coordinate (XDR4) at (4ex,-7\beamer@height/9);
+	\coordinate (XDL5) at (0,-8\beamer@height/9);
+	\coordinate (XDR5) at (4ex,-\beamer@height);
+	
+	\fill[gray!50] (BF) rectangle (BS);
+    {\usebeamercolor{frametitle}%
+      \draw[draw=none,fill=frametitle.bg] (UC) rectangle (IS -| LC);
+      \draw[draw=none,fill=frametitle.bg] (XDL1) rectangle (XDR1);
+	  \draw[draw=none,fill=frametitle.bg] (XDL2) rectangle (XDR2);
+	  \draw[draw=none,fill=frametitle.bg] (XDL3) rectangle (XDR3);
+	  \draw[draw=none,fill=frametitle.bg] (XDL4) rectangle (XDR4);
+	  \draw[draw=none,fill=frametitle.bg] (XDL5) rectangle (XDR5);
+    }
+    
+    \coordinate (logopos) at ([yshift=\beamer@height/2] IS);%coordinate of the logo
+	\ifx\beamer@xducolor\beamer@xducolorblue%
+      \node at (logopos) {\includegraphics[width=3cm]{XDUtheme/logo_xdblue}};
+	\else%
+      \node at (logopos) {\includegraphics[width=3cm]{XDUtheme/logo_xdred}};
+	\fi%
+  \end{tikzpicture}%
+  \tikzexternalenable
+}
+
+
+\mode<all>

@@ -1,0 +1,119 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\sectionentry {1}{目录}{2}{目录}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {2}{研究背景及意义}{3}{研究背景及意义}{0}}
+\headcommand {\beamer@sectionpages {2}{2}}
+\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{3}{视觉跟踪}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {2}{1}{1}{3/3}{视觉跟踪}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {2}{1}{2}{4/4}{视觉跟踪}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\sectionentry {3}{基于逻辑回归的集成学习跟踪}{5}{基于逻辑回归的集成学习跟踪}{0}}
+\headcommand {\beamer@sectionpages {3}{4}}
+\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\slideentry {3}{0}{1}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{6}{算法简介}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {3}{1}{1}{6/6}{算法简介}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{7}{逻辑回归分类器}}\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {3}{2}{1}{7/7}{逻辑回归分类器}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {3}{2}{2}{8/8}{逻辑回归分类器}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{9}{弱分类器}}\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\slideentry {3}{3}{1}{9/9}{弱分类器}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {3}{3}{2}{10/10}{弱分类器}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{11}{逻辑回归集成学习框架}}\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\slideentry {3}{4}{1}{11/11}{逻辑回归集成学习框架}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{12}{实验结果}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {3}{5}{1}{12/12}{实验结果}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {3}{5}{2}{13/13}{实验结果}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {3}{5}{3}{14/14}{实验结果}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {3}{5}{4}{15/15}{实验结果}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\sectionentry {4}{自适应目标响应的长时相关滤波跟踪}{16}{自适应目标响应的长时相关滤波跟踪}{0}}
+\headcommand {\beamer@sectionpages {5}{15}}
+\headcommand {\beamer@subsectionpages {12}{15}}
+\headcommand {\slideentry {4}{0}{1}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{17}{算法简介}}\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {4}{1}{1}{17/17}{算法简介}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{18}{位移滤波器}}\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\slideentry {4}{2}{1}{18/18}{位移滤波器}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {4}{2}{2}{19/19}{位移滤波器}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {4}{2}{3}{20/20}{位移滤波器}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{21}{尺度滤波器}}\headcommand {\beamer@subsectionpages {18}{20}}
+\headcommand {\slideentry {4}{3}{1}{21/21}{尺度滤波器}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{22}{SVM检测器}}\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\slideentry {4}{4}{1}{22/22}{SVM检测器}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{23}{实验结果}}\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\slideentry {4}{5}{1}{23/23}{实验结果}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {4}{5}{2}{24/24}{实验结果}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {4}{5}{3}{25/25}{实验结果}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {4}{5}{4}{26/26}{实验结果}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\sectionentry {5}{结构化输出的相关滤波跟踪}{27}{结构化输出的相关滤波跟踪}{0}}
+\headcommand {\beamer@sectionpages {16}{26}}
+\headcommand {\beamer@subsectionpages {23}{26}}
+\headcommand {\slideentry {5}{0}{1}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{28}{算法简介}}\headcommand {\beamer@subsectionpages {27}{27}}
+\headcommand {\slideentry {5}{1}{1}{28/28}{算法简介}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{29}{有限边界的相关滤波器}}\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\slideentry {5}{2}{1}{29/29}{有限边界的相关滤波器}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {5}{2}{2}{30/30}{有限边界的相关滤波器}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {5}{2}{3}{31/31}{有限边界的相关滤波器}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {5}{2}{4}{32/32}{有限边界的相关滤波器}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{33}{对于有限边界滤波器的改进}}\headcommand {\beamer@subsectionpages {29}{32}}
+\headcommand {\slideentry {5}{3}{1}{33/33}{对于有限边界滤波器的改进}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {5}{3}{2}{34/34}{对于有限边界滤波器的改进}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\beamer@subsectionentry {0}{5}{4}{35}{实验结果}}\headcommand {\beamer@subsectionpages {33}{34}}
+\headcommand {\slideentry {5}{4}{1}{35/35}{实验结果}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {5}{4}{2}{36/36}{实验结果}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {5}{4}{3}{37/37}{实验结果}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{4}{4}{38/38}{实验结果}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\sectionentry {6}{评审问题}{39}{评审问题}{0}}
+\headcommand {\beamer@sectionpages {27}{38}}
+\headcommand {\beamer@subsectionpages {35}{38}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{39}{三种模型的适用范围}}\headcommand {\beamer@subsectionpages {39}{38}}
+\headcommand {\slideentry {6}{1}{1}{39/39}{三种模型的适用范围}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {6}{1}{2}{40/40}{三种模型的适用范围}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@partpages {1}{40}}
+\headcommand {\beamer@subsectionpages {39}{40}}
+\headcommand {\beamer@sectionpages {39}{40}}
+\headcommand {\beamer@documentpages {40}}
+\headcommand {\def \inserttotalframenumber {38}}

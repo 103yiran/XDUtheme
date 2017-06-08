@@ -1,0 +1,57 @@
+%!TEX program = xelatex
+%\documentclass[UTF8,10pt]{ctexbeamer}%,aspectratio=169 %画面比例16:9%
+\documentclass[10pt]{beamer}
+\usepackage[UTF8]{ctex}
+
+\usetheme[
+%sidebar, % 会在每页左侧加上导航栏，参考 The AAU Sidebar Beamer Theme 设置
+% xdblue, % 不选会默认西电红色调，选上会将主题设置为西电蓝色调
+% english % 选上，会将图表等标题还原回英文标题
+%hidetitle,
+%hideauthor,
+%hideinstitute,
+ ]{XDUstyle}
+
+\graphicspath{{figures/}}
+%\usetheme{Madrid}
+%\useoutertheme[subsection=false]{miniframes}
+
+\AtBeginDocument{%
+    \title{基于优化集成学习与空间相关\\滤波的视觉目标跟踪}
+    %\subtitle{子标题}
+    \author[赵素杰]{%
+        \begin{tabular}{ll}
+            学\qquad{}生:& 赵素杰 \tabularnewline
+            指导老师:& 田小林~副教授
+        \end{tabular}
+    }
+    \institute[智能所]{西安电子科技大学\\“智能感知与图像理解”实验室} % 中括号部分为导航栏底所用尽可能精简
+    \date{\today}% 时间可自行设置
+}	
+\begin{document}%
+{%\xdbg
+  \frame[plain,noframenumbering]{\titlepage}}%首页标题页
+
+%\part{内容}
+\section*{目录}
+  \frame {
+    \frametitle{\secname}
+   % \begin{multicols}{2}
+    \tableofcontents[hidesubsections,sections={<1-6>}]
+  %\end{multicols}
+      }
+
+  \include{sections/general}
+  \include{sections/LogisticRegression}
+  \include{sections/CorrelationFilter}
+  \include{sections/CorrelationFilterswithLimitedBoundaries}
+  \include{sections/reviewIssues}
+
+
+{%\xdbg%末页致谢
+\begin{frame}[plain,noframenumbering]
+ \finalpage{{\huge 谢谢！}}
+%{\huge 谢谢！}
+\end{frame}}
+
+\end{document} 
